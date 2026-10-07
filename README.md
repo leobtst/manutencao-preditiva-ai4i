@@ -70,9 +70,9 @@ Matriz de confusão no teste (2.000 registros): 57 falhas detectadas, 11 não de
 
 **Variáveis mais importantes (importância por permutação no teste):** velocidade de rotação, diferença de temperatura, potência e torque × desgaste. Isso é coerente com a forma como o dataset gera as falhas.
 
-![Curva precisão x revocação](figuras/pr_curve_cv.png)
-![Matriz de confusão](figuras/confusion_matrix_test.png)
-![Importância por permutação](figuras/permutation_importance.png)
+![Curva precisão x revocação](pr_curve_cv.png)
+![Matriz de confusão](confusion_matrix_test.png)
+![Importância por permutação](permutation_importance.png)
 
 ## Limitações
 
