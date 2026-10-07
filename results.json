@@ -1,0 +1,154 @@
+{
+  "cost_ratio_assumption": 10,
+  "n_train": 8000,
+  "n_test": 2000,
+  "failures_train": 271,
+  "failures_test": 68,
+  "ablation_randomforest_cv": {
+    "brutas": {
+      "cv_pr_auc": 0.72,
+      "cv_roc_auc": 0.968
+    },
+    "derivadas": {
+      "cv_pr_auc": 0.885,
+      "cv_roc_auc": 0.977
+    }
+  },
+  "cv": {
+    "RandomForest": {
+      "cv_pr_auc": 0.885,
+      "cv_roc_auc": 0.977,
+      "thr_f1": 0.453,
+      "thr_cost": 0.335,
+      "cv_at_thr_f1": {
+        "threshold": 0.453,
+        "precision": 0.902,
+        "recall": 0.819,
+        "f1": 0.859,
+        "tn": 7705,
+        "fp": 24,
+        "fn": 49,
+        "tp": 222,
+        "cost": 514
+      },
+      "cv_at_thr_cost": {
+        "threshold": 0.335,
+        "precision": 0.804,
+        "recall": 0.849,
+        "f1": 0.826,
+        "tn": 7673,
+        "fp": 56,
+        "fn": 41,
+        "tp": 230,
+        "cost": 466
+      }
+    },
+    "GradientBoosting": {
+      "cv_pr_auc": 0.88,
+      "cv_roc_auc": 0.978,
+      "thr_f1": 0.9158,
+      "thr_cost": 0.68,
+      "cv_at_thr_f1": {
+        "threshold": 0.9158,
+        "precision": 0.94,
+        "recall": 0.812,
+        "f1": 0.871,
+        "tn": 7715,
+        "fp": 14,
+        "fn": 51,
+        "tp": 220,
+        "cost": 524
+      },
+      "cv_at_thr_cost": {
+        "threshold": 0.68,
+        "precision": 0.721,
+        "recall": 0.86,
+        "f1": 0.785,
+        "tn": 7639,
+        "fp": 90,
+        "fn": 38,
+        "tp": 233,
+        "cost": 470
+      }
+    }
+  },
+  "final_model_chosen_by_cv": "RandomForest",
+  "test": {
+    "RandomForest": {
+      "pr_auc": 0.865,
+      "roc_auc": 0.983,
+      "at_thr_f1": {
+        "threshold": 0.453,
+        "precision": 0.919,
+        "recall": 0.838,
+        "f1": 0.877,
+        "tn": 1927,
+        "fp": 5,
+        "fn": 11,
+        "tp": 57,
+        "cost": 115
+      },
+      "at_thr_cost": {
+        "threshold": 0.335,
+        "precision": 0.817,
+        "recall": 0.853,
+        "f1": 0.835,
+        "tn": 1919,
+        "fp": 13,
+        "fn": 10,
+        "tp": 58,
+        "cost": 113
+      }
+    },
+    "GradientBoosting": {
+      "pr_auc": 0.895,
+      "roc_auc": 0.983,
+      "at_thr_f1": {
+        "threshold": 0.9158,
+        "precision": 0.966,
+        "recall": 0.838,
+        "f1": 0.898,
+        "tn": 1930,
+        "fp": 2,
+        "fn": 11,
+        "tp": 57,
+        "cost": 112
+      },
+      "at_thr_cost": {
+        "threshold": 0.68,
+        "precision": 0.787,
+        "recall": 0.868,
+        "f1": 0.825,
+        "tn": 1916,
+        "fp": 16,
+        "fn": 9,
+        "tp": 59,
+        "cost": 106
+      }
+    }
+  },
+  "bootstrap_95ci_final_at_thr_f1": {
+    "precision": [
+      0.843,
+      0.982
+    ],
+    "recall": [
+      0.742,
+      0.922
+    ]
+  },
+  "permutation_importance_test": {
+    "Rot_Speed": 0.3804,
+    "Temp_Diff": 0.2542,
+    "Power_W": 0.0946,
+    "Torque_x_Wear": 0.0805,
+    "Tool_Wear": 0.0331,
+    "Torque": 0.0309,
+    "Type_M": 0.0173,
+    "Type_H": 0.0171,
+    "TempDiff_x_Wear": 0.0036,
+    "Power_x_Wear": -0.0011,
+    "Air_Temp": -0.0053,
+    "Process_Temp": -0.0131
+  }
+}

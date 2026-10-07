@@ -1,0 +1,7 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+# opcional: o script também treina XGBoost se estiver instalado
+# xgboost
